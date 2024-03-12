@@ -11,25 +11,25 @@ This data was extracted from the 1994 Census bureau database by Ronny Kohavi and
 ## Nature of Task:
 Supervised Machine Learning > Binary Classification
 
-## Description of dataset features:
+## Dataset Features:
 
-### Target:
-income: >50K, <=50K
-
-### Predictors:
-- age: continuous workclass: Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked
-- fnlwgt: continuous
-- education: Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, Assoc-voc, 9th, 7th-8th, 12th, Masters, 1st-4th, 10th, Doctorate, 5th-6th, Preschool
-- education-num: continuous
-- marital-status: Married-civ-spouse, Divorced, Never-married, Separated, Widowed, Married-spouse-absent, Married-AF-spouse
-- occupation: Tech-support, Craft-repair, Other-service, Sales, Exec-managerial, Prof-specialty, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces
-- relationship: Wife, Own-child, Husband, Not-in-family, Other-relative, Unmarried
-- race: White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black
-- sex: Female, Male
-- capital-gain: continuous
-- capital-loss: continuous
-- hours-per-week: continuous
-- native-country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands
+| #   | Type        | Variable       | Values        |
+| --- | ----------- | -------------- | ------------- |
+|  1. | categorical | income         | >50K, <=50K   |
+|  2. | numeric     | age            | continuous    |
+|  3. | categorical | workclass      | Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked |
+|  4. | numeric     | fnlwgt         | continuous    |
+|  5. | categorical | education      | Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, Assoc-voc, 9th, 7th-8th, 12th, Masters, 1st-4th, 10th, Doctorate, 5th-6th, Preschool |
+|  6. |  numeric    | education-num  | continuous |
+|  7. | categorical | marital-status | Married-civ-spouse, Divorced, Never-married, Separated, Widowed, Married-spouse-absent, Married-AF-spouse |
+|  8. | categorical | occupation     | Tech-support, Craft-repair, Other-service, Sales, Exec-managerial, Prof-specialty, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces |
+|  9. | categorical | relationship   | Wife, Own-child, Husband, Not-in-family, Other-relative, Unmarried |
+| 10. | categorical | race           | White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black |
+| 11. | categorical | sex            | Female, Male |
+| 12. | numeric     | capital-gain   | continuous |
+| 13. | numeric     | capital-loss   | continuous |
+| 14. | numeric     | hours-per-week | continuous |
+| 15. | categorical | native-country | United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands |
 
 # APPLICATION OF THE CRISP-DM PROCESS
 1. Data Exploration Phase
