@@ -3,7 +3,6 @@
 ## Dataset:
 Adult Census Income from Kaggle
 
-## Source of the Data:
 https://www.kaggle.com/uciml/adult-census-income
 
 This data was extracted from the 1994 Census bureau database by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics). The task is to predict whether income exceeds $50k per year based on the census data provided above. The Dataset consists of a list of records, each of which captures various features of an individual including income per year.
