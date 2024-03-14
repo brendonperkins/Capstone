@@ -41,9 +41,9 @@ Supervised Machine Learning > Binary Classification
 
 Observations:
 - Native-Born individuals overwhelmingly dominate the dataset (See Plot 08), so Native-Born and Foreign-Born individuals are split into two separate datasets for separate modeling and analysis. This prevents the Native-Born records from biasing the drivers of Foreign-Born success, which are likely different for each group.
+- The number of records having a Target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). The dataset needs to be balanced with the target values so that the models do not become biased to the majority class (See Plot 09).
 - Individuals >75 years of age are not adequately represented in the dataset (See Plot 10), so the records for these individuals were dropped.
 - Individuals with >65 hours-per-week are not adequately represented in the dataset (See Plot 11), so the records for these individuals were dropped.
-- The number of records having a Target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). The dataset needs to be balanced with the target values so that the models do not become biased to the majority class (See Plot 09).
 - The “capital gain” and “capital loss” columns are sparsely populated with non-zero values, so they will be dropped.
 - There are missing values in three of the dataset columns (workclass: 5.7%, occupation: 5.7%, and native country: 1.7%). Due to the sparseness of the missing values, records with missing values are dropped.
 - Histogram plots of the numeric variables show they all have skewed distributions, so they will be replaced with log-transformed values. See Plots 22 - 24.
