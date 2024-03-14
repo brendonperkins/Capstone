@@ -48,7 +48,7 @@ Observations:
 - There are missing values in three of the dataset columns (workclass: 5.7%, occupation: 5.7%, and native country: 1.7%). Due to the sparseness of the missing values, records with missing values are dropped.
 - Histogram plots of the numeric variables show they all have skewed distributions, so they will be replaced with log-transformed values. See Plots 22 - 24.
 - There are no significant correlations between numeric variables (See Plot 25). Therefore, they can be treated as independent predictors of the Target variable.
-- All classes representing less than a high school diploma in the education column have similar target ratios, indicating that the differentiation of education below a high school diploma adds no insight into the drivers of income. Therefore, all classes representing education levels of less than a high school diploma were aggregated into a single class.
+- All classes representing less than a high school diploma in the education column have similar target ratios (See Plot 13), indicating that the differentiation of education below a high school diploma adds no insight into the drivers of income. Therefore, all classes representing education levels of less than a high school diploma were aggregated into a single class.
 - The “education-num” column is duplicative of the “education” column, and is, therefore, dropped from the dataset.
 - All numeric columns were scaled.
 - All categorical columns were encoded using OneHotEncoding with column dropping enabled for columns with binary classes.
