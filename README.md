@@ -134,21 +134,16 @@ Model evaluation metrics are required to quantify model performance. The choice 
   - Datasets that have been prepared similar to the training set
 
 # Conclusion
-- Both datasets identified Occupation, Education, and Marital Status as the most important parameters for predicting the likelihood of achieving incomes >$50K. For the Foreign-Born dataset, native-country is also an important factor.
-- Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector.
-- Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold.
-- Married individuals are far likelier than single individuals to exceed the $50K income threshold.
-- Whites are far likelier than other races to exceed the $50K income threshold. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset.
-- Males are far likelier to exceed the $50K income threshold. 
-- Foreign-Born individuals originating from the Caribbean and Central/South America are the least likely to exceed the $50K income threshold.
-- Foreign-Born from Canada, Europe, and Asia are the most likely to exceed the $50K income threshold.
-- Likelihood of exceeding $50K income threshold increases with age up to 55 years and decreases thereafter.
-- Likelihood of exceeding $50K threshold increases with hours per week up to 60 and decreases thereafter before leveling off at 80.
-- Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector.
-- Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold.
-- Married individuals are far likelier than single individuals to exceed the $50K income threshold.
-- Whites are far likelier than other races to exceed the $50K income threshold. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset.
-- Males are far likelier to exceed the $50K income threshold.
+- Both datasets identified Occupation, Education, and Relationship within the top 5 most important parameters for predicting the likelihood of achieving incomes >$50K. For the Foreign-Born dataset, native-country is also an important factor.
+- Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
+- Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
+- Married individuals are far likelier than single individuals to exceed the $50K income threshold (See Plot 14).
+- Whites are far likelier than other races to exceed the $50K income threshold. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset (See Plot 17).
+- Males are far likelier to exceed the $50K income threshold (See Plot 18).
+- Foreign-Born individuals originating from the Caribbean and Central/South America are the least likely to exceed the $50K income threshold (See Plot 19).
+- Foreign-Born from Canada, Europe, and Asia are the most likely to exceed the $50K income threshold (See Plot 19).
+- Likelihood of exceeding $50K income threshold increases with age up to 55 years and decreases thereafter (See Plot 20).
+- Likelihood of exceeding $50K threshold increases with hours per week up to 60 and decreases thereafter before leveling off at 80 (See Plot 21).
 
 # Suggested Follow-Up
 Look at the underlying reasons for the lower likelihood of Foreign-Born individuals from Caribbean and Central/South American countries exceeding the $50K income threshold. Determine if underlying causes are 1) the result of socio-economic policies in native countries of origin, or 2) the result of a direct land bridge to the United States, making it a more accessible destination for individuals of all socio-economic classes.
