@@ -124,12 +124,13 @@ Model evaluation metrics are required to quantify model performance. The choice 
     - Precision = 0.49
     - Recall = 0.89
     - F1 Score = 0.63
+![foreign](https://github.com/brendonperkins/Capstone/assets/48937916/924c837d-e4fc-40a8-aac4-0cb676b07294)
 ## Deployment Phase
 - Native- and Foreign-Born Models are valid only for:
   - Ages 18 to 75 years of age.
   - Hours-per-Week of 15 to 65
   - Datasets that have been prepared similar to the training set
-  ![foreign](https://github.com/brendonperkins/Capstone/assets/48937916/924c837d-e4fc-40a8-aac4-0cb676b07294)
+
 # Conclusion
 - Both datasets identified Occupation, Education, and Marital Status as the most important parameters for predicting the likelihood of achieving incomes >$50K. For the Foreign-Born dataset, native-country is also an important factor.
 - Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector.
