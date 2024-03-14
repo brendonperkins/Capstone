@@ -129,7 +129,7 @@ Model evaluation metrics are required to quantify model performance. The choice 
   - Ages 18 to 75 years of age.
   - Hours-per-Week of 15 to 65
   - Datasets that have been prepared similar to the training set
-  
+  ![foreign](https://github.com/brendonperkins/Capstone/assets/48937916/924c837d-e4fc-40a8-aac4-0cb676b07294)
 # Conclusion
 - Both datasets identified Occupation, Education, and Marital Status as the most important parameters for predicting the likelihood of achieving incomes >$50K. For the Foreign-Born dataset, native-country is also an important factor.
 - Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector.
