@@ -32,14 +32,15 @@ Supervised Machine Learning > Binary Classification
 
 # APPLICATION OF THE CRISP-DM PROCESS
 1. Data Exploration Phase
-    - Determine raw counts of class instances for categorical columns
-    - Determine Target Ratio (= Raw Count of >$50k / Raw Count <=$50K) for categorical classes
-    - Determine Target Ratio (= Raw Count of >$50k / Raw Count <=$50K) for binned numeric cols
-    - Identify Opportunities for Class Simplification
+    - Determine raw counts of Target Class >$50 by Class (for Categorical Columns) or Bracketed Value (for Numeric Columns).
+    - Determine Target Ratio (= Raw Count of >$50k / Raw Count <=$50K) by Class (for Categorical Columns) or Bracketed Value (for Numeric Columns).
+    - Plot histograms for numeric columns.
+    - Plot correlation matrix (heat map for Numeric columns).
 2. Data Preparation Phase
     - Identify and Address Missing Values
     - Identify and Address Outlier Values
     - Identify and Address Skewed Histograms
+    - Identify Opportunities for Class Simplification
     - Identify Opportunities for Numeric Encoding of Categorical Columns
     - Determine Independence of Numeric Variables (heat map)
     - Implement Scaling for numeric columns
@@ -72,12 +73,14 @@ Observations:
 - The “education-num” column is duplicative of the “education” column, and is, therefore, dropped from the dataset.
 - All numeric columns were scaled.
 - All categorical columns were encoded using OneHotEncoding with column dropping enabled for columns with binary classes.
-- Datasets were split into two sets: Tarining (80%) and Test (20%)
+- Datasets were split into two sets: Tarining (70%) and Test (30%).
+- The datasets were split into training and test sets using a 70%/30% split.
+- The Synthetic Minority Over-sampling (SMOTE) method was then used to ensure a Minority/Majority ratio of 0.75 to 1 for the Target Variable classes in the Training set only. 
 
 ![raw counts copy](https://github.com/brendonperkins/Capstone/assets/48937916/347ae187-2254-4a04-993b-7b91c9ae3d1a)
 
 ## Modeling Phase
-The datasets were split into training and test sets using a 70%/30% split. The Synthetic Minority Over-sampling (SMOTE) method was then used to ensure a Minority/Majority ratio of 0.75 to 1 for the Target Variable classes. The following set of models were developed and trained separately on the two datasets, the first for Native-Born individuals and the second for Foreign-Born individuals:
+The following set of models were developed and trained separately on the two datasets, the first for Native-Born individuals and the second for Foreign-Born individuals:
 
 - LOGISTIC REGRESSION: A model for binary classification, predicting the probability of a default class instance using a logistic function. 
   - Hyper-Params:
