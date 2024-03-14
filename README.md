@@ -112,7 +112,7 @@ Model evaluation metrics are required to quantify model performance. The choice 
     - Precision = 0.54
     - Recall = 0.85
     - F1 Score = 0.66
-
+![native](https://github.com/brendonperkins/Capstone/assets/48937916/4f4c762a-2b3b-4a60-9fc2-9790c80bf2e7)
 ### Results for Foreign-Born Dataset
 
 - Best Model: 
