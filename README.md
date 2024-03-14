@@ -40,7 +40,7 @@ Supervised Machine Learning > Binary Classification
 ## Data Exploration and Preparation Phases
 
 Observations:
-- The number of records having a Target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). The dataset needs to be balanced with the target values so that the models do not become biased to the majority class.
+- The number of records having a Target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). The dataset needs to be balanced with the target values so that the models do not become biased to the majority class. See Plot @09.
 - The “capital gain” and “capital loss” columns are sparsely populated with non-zero values, so they will be dropped.
 - There are missing values in three of the dataset columns (workclass: 5.7%, occupation: 5.7%, and native country: 1.7%). Due to the sparseness of the missing values, records with missing values are dropped.
 - Histogram plots of the numeric variables show they all have skewed distributions, so they will be replaced with log-transformed values.
