@@ -53,7 +53,7 @@ Observations:
 - All numeric columns were scaled.
 - All categorical columns were encoded using OneHotEncoding with column dropping enabled for columns with binary classes.
 
-![raw counts copy](https://github.com/brendonperkins/Capstone/assets/48937916/0256327b-dd87-4a8c-830f-bb1b62ee43f3)
+![raw counts copy](https://github.com/brendonperkins/Capstone/assets/48937916/347ae187-2254-4a04-993b-7b91c9ae3d1a)
 
 ## Modeling Phase
 The datasets were split into training and test sets using a 70%/30% split. The Synthetic Minority Over-sampling (SMOTE) method was then used to ensure a Minority/Majority ratio of 0.75 to 1 for the Target Variable classes. The following set of models were developed and trained separately on the two datasets, the first for Native-Born individuals and the second for Foreign-Born individuals:
