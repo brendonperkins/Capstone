@@ -126,6 +126,7 @@ Model evaluation metrics are required to quantify model performance. The choice 
     - Recall = 0.89
     - F1 Score = 0.63
 ![foreign](https://github.com/brendonperkins/Capstone/assets/48937916/924c837d-e4fc-40a8-aac4-0cb676b07294)
+![IMPORTANCE - FOREIGN](https://github.com/brendonperkins/Capstone/assets/48937916/9f781495-091c-4a46-aa75-965fecc15595)
 ## Deployment Phase
 - Native- and Foreign-Born Models are valid only for:
   - Ages 18 to 75 years of age.
