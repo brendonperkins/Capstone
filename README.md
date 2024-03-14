@@ -32,10 +32,30 @@ Supervised Machine Learning > Binary Classification
 
 # APPLICATION OF THE CRISP-DM PROCESS
 1. Data Exploration Phase
+    - Determine raw counts of class instances for categorical columns
+    - Determine Target Ratio (= Raw Count of >$50k / Raw Count <=$50K) for categorical classes
+    - Determine Target Ratio (= Raw Count of >$50k / Raw Count <=$50K) for binned numeric cols
+    - Identify Opportunities for Class Simplification
 2. Data Preparation Phase
+    - Identify and Address Missing Values
+    - Identify and Address Outlier Values
+    - Identify and Address Skewed Histograms
+    - Identify Opportunities for Numeric Encoding of Categorical Columns
+    - Determine Independence of Numeric Variables (heat map)
+    - Implement Scaling for numeric columns
+    - Split dataset into Training and Test Sets
+    - Identify and Address Class Imbalances in Target Variable for Training set
 3. Modeling Phase
+    - Use GridSearchCV to tune hyper-parameters
+    - Generate ROC curves and optimize thresholds
+    - Assess confusion matrices and associated metrics
 4. Evaluation Phase
+    - Implement ROC Curves and select model with best performance
+      - Determine optimal threshold
+      - Report confusion matrix and associated metrics
+      - Report feature importances for model with best performance
 5. Deployment Phase
+6. Suggested Follow-Up
 
 ## Data Exploration and Preparation Phases
 
@@ -52,6 +72,7 @@ Observations:
 - The “education-num” column is duplicative of the “education” column, and is, therefore, dropped from the dataset.
 - All numeric columns were scaled.
 - All categorical columns were encoded using OneHotEncoding with column dropping enabled for columns with binary classes.
+- Datasets were split into two sets: Tarining (80%) and Test (20%)
 
 ![raw counts copy](https://github.com/brendonperkins/Capstone/assets/48937916/347ae187-2254-4a04-993b-7b91c9ae3d1a)
 
