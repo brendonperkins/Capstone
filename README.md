@@ -8,7 +8,7 @@
 
 **Nature of Task:** Supervised Machine Learning > Binary Classification
 
-**Objective:** Develop a models using multiple classifiers that predict whether an individual's annual income exceeds $50K based on 14 input paramters provided in the dataset. Compare and contrast the models to select the best model and extract feature importances for the best model. 
+**Objective:** Develop models using multiple classifiers that predict whether an individual's annual income exceeds $50K based on 14 input paramters provided in the dataset. Compare and contrast the models to select the best model and extract feature importances for the best model. 
 
 ## Dataset Features:
 
