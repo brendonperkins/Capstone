@@ -164,7 +164,7 @@ the score.
 ![ALL - SVM](https://github.com/brendonperkins/Capstone/assets/48937916/4b965319-8697-4e47-a7ca-9b22a69671d4)
 
 # Conclusion
-- Both datasets identified Occupation, Education, and Relationship within the top 5 most important parameters for predicting the likelihood of achieving incomes >$50K. For the Foreign-Born dataset, native-country is also an important factor.
+- The Random Forest model identified Marital Status, Captial-Gains, Education, Relationship, Occupation, and Age as the top 6 most important parameters for predicting the likelihood of achieving incomes >$50K. The least important parameters included race,native-country, gender, and working class as the least significant.
 - Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
 - Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
 - Married individuals are far likelier than single individuals to exceed the $50K income threshold (See Plot 14).
