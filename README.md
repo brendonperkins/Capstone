@@ -148,12 +148,50 @@ the score.
 - **Recall:** Is the number of correct positive results divided by the number of all relevant samples (total actual
 - **F-score:** Is a measure of a test’s accuracy that considers both the precision and the recall of the test to compute positives).
 
-**MODELS**
+**RESULTS - ANALYSIS #1**
+
+The first analysis focused on the full dataset using F1 scoring in conjunction with Precision-Recall Curves to maximize the F1 score for the best performing model. No target variable re-balancing was implemented.
+
 ![ALL - PR-CURVE](https://github.com/brendonperkins/Capstone/assets/48937916/be83c4c0-b04b-4108-ac33-92ce19f7e142)
 
 - **BEST MODEL:** It should be notied that all the models perform well as predictors of the target variable given the input variables. However, based on the performance metrics provided for each model, the RandomForest model was identified to be the best choice for this classification task. Here's why:
 
-    - **Highest Average Precision (Area):** The has the hishest Average Precision (identified as Area on the plot) among the alternatives with a value of 0.79, suggesting that it captures the best F1 score, the harmonic mean of precision and recall. F1 is, indeed, the highest for RandomForest (0.681532) at the default threshold, suggesting it provides the best balance between precision and recall among the models tested.
+    - **Highest Average Precision (Area):** The has the hishest Average Precision (identified as "Area" on the plot) among the alternatives with a value of 0.79, suggesting that it captures the best F1 score, the harmonic mean of precision and recall. F1 is, indeed, the highest for RandomForest (0.681532) at the default threshold, suggesting it provides the best balance between precision and recall among the models tested.
+
+    - **Highest F1 Score:** The F1 score, which is the harmonic mean of precision and recall, is highest for RandomForest (0.681532) at the default threshold, suggesting it has the best balance between precision and recall among the models tested.
+
+    - **Highest Overall Accuracy:** RandomForest achieved the highest accuracy (0.855419) at the default threshold, indicating it correctly classified a higher percentage of instances compared to other models.
+
+    - **Balance between Precision and Recall:** It also demonstrated a strong balance between precision (0.768536) and recall (0.612224) at the default threshold, indicating a good balance between the rate of true positive predictions and the model's ability to capture the positive class.
+
+- **LOGISTIC REGRESSION:** The LogisticRegression model displayed a solid performance with an accuracy of 0.840493, precision of 0.728081, and recall of 0.588598, leading to an F1 score of 0.650951. It found its best parameters to be {'C': 1.0, 'penalty': 'l1'}, achieving this with a relatively quick training duration of 7.07 seconds. The model demonstrated a good balance between precision and recall, making it a competent choice for binary classification tasks, especially considering its efficiency in training time.
+![ALL - LR](https://github.com/brendonperkins/Capstone/assets/48937916/eb03d853-81b1-4aea-91c7-bae54781e5b3)
+
+- **K-NEAREST NEIGHBORS:** KNeighbors, with its best parameters set to {'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'uniform'}, achieved an accuracy of 0.824659. The model had a precision of 0.659018 and a recall of 0.634309, resulting in an F1 score of 0.646428. Although it required a longer training time of 53.92 seconds, its performance indicates a moderate balance between identifying the positive class and minimizing false positives, though it lagged slightly behind other models in overall accuracy.
+![ALL - KN](https://github.com/brendonperkins/Capstone/assets/48937916/8196125b-d7d4-49b8-b614-a205adbcc168)
+
+- **DECISION TREE:** The DecisionTree model, optimized with {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 2}, showed strong results with an accuracy of 0.845165, a precision of 0.743855, and a recall of 0.590652, which led to an F1 score of 0.658460. Its training was notably efficient, taking only 6.53 seconds, suggesting that DecisionTree is a fast and fairly accurate model for handling binary classification, though it faces limitations in balancing precision and recall as effectively as some other models.
+![ALL - DT](https://github.com/brendonperkins/Capstone/assets/48937916/58fdb454-f8f6-413d-8d08-7807e12bfc15)
+
+- **RANDOM FOREST:** Demonstrating the best overall performance, the RandomForest model, with parameters {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100}, achieved the highest accuracy of 0.855419 among the models tested. It showed a precision of 0.768536 and a recall of 0.612224, leading to the highest F1 score of 0.681532. Despite a longer training duration of 98.75 seconds, its ability to maintain a high accuracy while also achieving the best balance between precision and recall marks it as the top contender.
+![ALL - RF](https://github.com/brendonperkins/Capstone/assets/48937916/5f133504-5b2a-4e33-b73b-3f4a2007dc1a)
+
+- **NEURAL NETWORK:** The NeuralNetwork, optimized with {'batch_size': 32, 'dropout_rate': 0.2, 'epochs': 20, 'layers': [64, 64, 32], 'optimizer': 'adam'}, recorded an accuracy of 0.840493. It achieved a precision of 0.764749 and a recall of 0.532614, culminating in an F1 score of 0.627914. While its training duration was the longest at 471.90 seconds, the model showed strong potential in minimizing false positives but at the expense of a lower recall rate, indicating a challenge in identifying all positive cases effectively.
+![ALL - NN](https://github.com/brendonperkins/Capstone/assets/48937916/dff44c27-ac4a-4dfd-99c8-4dba45791063)
+
+- **SUPPORT VECTOR MACHINE:** SVM found its best performance with parameters {'C': 100, 'gamma': 'auto', 'kernel': 'rbf'}, reaching an accuracy of 0.842310. The model had a high precision of 0.806020 but a lower recall of 0.495121, resulting in an F1 score of 0.613427. Its training took the longest time of 549.31 seconds, suggesting that while SVM is very capable of identifying positive cases with high confidence, it struggles more with recall, making it less efficient at capturing the majority of the positive class.
+![ALL - SVM](https://github.com/brendonperkins/Capstone/assets/48937916/ebbb1532-81c3-4a43-a4c6-f4cf2987158f)
+
+
+**RESULTS - ANALYSIS #2**
+
+The second analysis focused on the full dataset using Accuracy as the scoring criteria in conjunction with ROC Curves to maximize the Accuracy score for the best performing model. Target variable re-balancing was implemented using SMOTE to rebalance the target majority/minotiy classes to a 1:1 ratio.
+
+![ALL - PR-CURVE](https://github.com/brendonperkins/Capstone/assets/48937916/be83c4c0-b04b-4108-ac33-92ce19f7e142)
+
+- **BEST MODEL:** It should be notied that all the models perform well as predictors of the target variable given the input variables. However, based on the performance metrics provided for each model, the RandomForest model was identified to be the best choice for this classification task. Here's why:
+
+    - **Highest Average Precision (Area):** The has the hishest Average Precision (identified as "Area" on the plot) among the alternatives with a value of 0.79, suggesting that it captures the best F1 score, the harmonic mean of precision and recall. F1 is, indeed, the highest for RandomForest (0.681532) at the default threshold, suggesting it provides the best balance between precision and recall among the models tested.
 
     - **Highest F1 Score:** The F1 score, which is the harmonic mean of precision and recall, is highest for RandomForest (0.681532) at the default threshold, suggesting it has the best balance between precision and recall among the models tested.
 
