@@ -1,4 +1,4 @@
-# BUSINESS UNDERSTANDING
+# Business Understanding
 
 **Dataset:** Adult Census Income from Kaggle
 
@@ -10,7 +10,22 @@
 
 **Objective:** Develop models using multiple classifiers that predict whether an individual's annual income exceeds $50K based on 14 input paramters provided in the dataset. Compare and contrast the models to select the best model and extract feature importances for the best model. 
 
-## Dataset Features:
+# Summarized Results
+- The Random Forest model identified Marital Status, Captial-Gains, Education, Relationship, Occupation, and Age as the top 6 most important parameters for predicting the likelihood of achieving incomes >$50K. The least important parameters included race,native-country, gender, and working class as the least significant.
+- Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
+- Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
+- Married individuals are far likelier than single individuals to exceed the $50K income threshold (See Plot 14).
+- Whites are far likelier than other races to exceed the $50K income threshold. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset (See Plot 17).
+- Males are far likelier to exceed the $50K income threshold (See Plot 18).
+- Foreign-Born individuals originating from the Caribbean and Central/South America are the least likely to exceed the $50K income threshold (See Plot 19).
+- Foreign-Born from Canada, Europe, and Asia are the most likely to exceed the $50K income threshold (See Plot 19).
+- Likelihood of exceeding $50K income threshold increases with age up to 55 years and decreases thereafter (See Plot 20).
+- Likelihood of exceeding $50K threshold increases with hours per week up to 60 and decreases thereafter before leveling off at 80 (See Plot 21).
+
+# Suggested Follow-Up
+Look at the underlying reasons for the lower likelihood of Foreign-Born individuals from Caribbean and Central/South American countries exceeding the $50K income threshold. Determine if underlying causes are 1) the result of socio-economic policies in native countries of origin, or 2) the result of a direct land bridge to the United States, making it a more accessible destination for individuals of all socio-economic classes.
+
+# Dataset Features
 
 The dataset contains 43,957 entries.
 
@@ -32,7 +47,7 @@ The dataset contains 43,957 entries.
 | 14. | numeric     | hours-per-week | continuous |
 | 15. | categorical | native-country | United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands |
 
-# APPLICATION OF THE CRISP-DM PROCESS
+# Application of the CRISP-DM Process
 1. **Data Exploration Phase**
     - Determine raw counts of Target Class >$50 by Class (for Categorical Columns) or Bracketed Value (for Numeric Columns).
     - Determine Target Ratio (= Raw Count of >$50k / Raw Count <=$50K) by Class (for Categorical Columns) or Bracketed Value (for Numeric Columns).
@@ -58,7 +73,6 @@ The dataset contains 43,957 entries.
       - Report confusion matrix and associated metrics
       - Report feature importances for model with best performance
 5. **Deployment Phase**
-6. **Suggested Follow-Up**
 
 ## Data Exploration and Preparation Phases
 
@@ -164,19 +178,3 @@ the score.
 
 - **SUPPORT VECTOR MACHINE:** SVM found its best performance with parameters {'C': 100, 'gamma': 'auto', 'kernel': 'rbf'}, reaching an accuracy of 0.842310. The model had a high precision of 0.806020 but a lower recall of 0.495121, resulting in an F1 score of 0.613427. Its training took the longest time of 549.31 seconds, suggesting that while SVM is very capable of identifying positive cases with high confidence, it struggles more with recall, making it less efficient at capturing the majority of the positive class.
 ![ALL - SVM](https://github.com/brendonperkins/Capstone/assets/48937916/4b965319-8697-4e47-a7ca-9b22a69671d4)
-
-# Conclusion
-- The Random Forest model identified Marital Status, Captial-Gains, Education, Relationship, Occupation, and Age as the top 6 most important parameters for predicting the likelihood of achieving incomes >$50K. The least important parameters included race,native-country, gender, and working class as the least significant.
-- Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
-- Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
-- Married individuals are far likelier than single individuals to exceed the $50K income threshold (See Plot 14).
-- Whites are far likelier than other races to exceed the $50K income threshold. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset (See Plot 17).
-- Males are far likelier to exceed the $50K income threshold (See Plot 18).
-- Foreign-Born individuals originating from the Caribbean and Central/South America are the least likely to exceed the $50K income threshold (See Plot 19).
-- Foreign-Born from Canada, Europe, and Asia are the most likely to exceed the $50K income threshold (See Plot 19).
-- Likelihood of exceeding $50K income threshold increases with age up to 55 years and decreases thereafter (See Plot 20).
-- Likelihood of exceeding $50K threshold increases with hours per week up to 60 and decreases thereafter before leveling off at 80 (See Plot 21).
-
-# Suggested Follow-Up
-Look at the underlying reasons for the lower likelihood of Foreign-Born individuals from Caribbean and Central/South American countries exceeding the $50K income threshold. Determine if underlying causes are 1) the result of socio-economic policies in native countries of origin, or 2) the result of a direct land bridge to the United States, making it a more accessible destination for individuals of all socio-economic classes.
-
