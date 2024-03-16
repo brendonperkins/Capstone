@@ -130,6 +130,8 @@ the score.
 - **F--score:** Is a measure of a test’s accuracy that considers both the precision and the recall of the test to compute positives).
 
 **MODELS**
+![ALL - PR-CURVE](https://github.com/brendonperkins/Capstone/assets/48937916/8aa316d9-1116-4fae-8c18-b5e851ae88ab)
+
 - **LOGISTIC REGRESSION:** 
 ![ALL - LR](https://github.com/brendonperkins/Capstone/assets/48937916/6146828e-c413-4073-9c7b-c429aa51d667)
 
