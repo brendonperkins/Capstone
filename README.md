@@ -118,7 +118,13 @@ The following set of models were developed and trained separately on the two dat
   - dropout_rate: 0.0, 0.2
 
 ## Evaluation Phase
-
+Model evaluation metrics are required to quantify model performance. The choice of evaluation metrics depends on a given machine learning task (such as classification, regression, ranking, clustering, topic modeling, among others). Some metrics, such as precision-recall, are useful for multiple tasks.
+- Area under Curve (AUC) Area under ROC Curve is a performance metric for measuring the ability of a binary classifier to discriminate between positive and negative classes.
+- Confusion Matrix A confusion matrix provides a more detailed breakdown of correct and incorrect classifications for each class.The diagonal elements represent the number of points for which the predicted label is equal to the true label, while anything off the diagonal was mislabeled by the classifier. Therefore, the higher the diagonal values of the confusion matrix the better, indicating many correct predictions.
+- Accuracy: Is a common evaluation metric for classification problems. It’s the number of correct predictions made as a ratio of all predictions made. We use sklearn module to compute the accuracy of a classification task
+- F-Measure (also F-score): Is a measure of a test’s accuracy that considers both the precision and the recall of the test to compute the score.
+- Precision: Is the number of correct positive results divided by the total predicted positive observations.
+- Recall: Is the number of correct positive results divided by the number of all relevant samples (total actual positives).
 - **LOGISTIC REGRESSION:** 
 ![ALL - LR](https://github.com/brendonperkins/Capstone/assets/48937916/6146828e-c413-4073-9c7b-c429aa51d667)
 
@@ -136,14 +142,6 @@ The following set of models were developed and trained separately on the two dat
 
 - **SUPPORT VECTOR MACHINE:** 
 ![ALL - SVM](https://github.com/brendonperkins/Capstone/assets/48937916/4b965319-8697-4e47-a7ca-9b22a69671d4)
-
-Model evaluation metrics are required to quantify model performance. The choice of evaluation metrics depends on a given machine learning task (such as classification, regression, ranking, clustering, topic modeling, among others). Some metrics, such as precision-recall, are useful for multiple tasks.
-- Area under Curve (AUC) Area under ROC Curve is a performance metric for measuring the ability of a binary classifier to discriminate between positive and negative classes.
-- Confusion Matrix A confusion matrix provides a more detailed breakdown of correct and incorrect classifications for each class.The diagonal elements represent the number of points for which the predicted label is equal to the true label, while anything off the diagonal was mislabeled by the classifier. Therefore, the higher the diagonal values of the confusion matrix the better, indicating many correct predictions.
-- Accuracy: Is a common evaluation metric for classification problems. It’s the number of correct predictions made as a ratio of all predictions made. We use sklearn module to compute the accuracy of a classification task
-- F-Measure (also F-score): Is a measure of a test’s accuracy that considers both the precision and the recall of the test to compute the score.
-- Precision: Is the number of correct positive results divided by the total predicted positive observations.
-- Recall: Is the number of correct positive results divided by the number of all relevant samples (total actual positives).
 
 ### Results for Native-Born Dataset
 - Best Model: 
