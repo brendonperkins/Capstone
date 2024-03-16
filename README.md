@@ -117,25 +117,20 @@ The following set of models were developed and trained separately on the two dat
   - optimizer: adam, rmsprop
   - dropout_rate: 0.0, 0.2
 
-
-
-
-
-
 ## Evaluation Phase
 
-- LOGISTIC REGRESSION: A model for binary classification, predicting the probability of a default class instance using a logistic function. 
+- **LOGISTIC REGRESSION:** 
 ![ALL - LR](https://github.com/brendonperkins/Capstone/assets/48937916/6146828e-c413-4073-9c7b-c429aa51d667)
 
-- K-NEAREST NEIGHBORS: A non-parametric method that classifies a majority class instance among its closest K neighbors.
+- **K-NEAREST NEIGHBORS:**
 
-- DECISION TREE: A tree-like model of decisions and consequences, useful for modeling decisions with conditional control statements.
+- **DECISION TREE:**
 
-- RANDOM FOREST: An ensemble learning method that incorporates "bagging," or bootstrap aggregating, to improve stability and accuracy in machine learning models. 
+- **RANDOM FOREST:** 
 
-- SUPPORT VECTOR MACHINE: Maximizes the margin between the datapoints of different classes.
+- **SUPPORT VECTOR MACHINE:** 
 
-- NEURAL NETWORK: Algorithms that mimic brain function to discern data relationships, capable of adapting to changing inputs to generate optimal results.
+- **NEURAL NETWORK:** 
 
 Model evaluation metrics are required to quantify model performance. The choice of evaluation metrics depends on a given machine learning task (such as classification, regression, ranking, clustering, topic modeling, among others). Some metrics, such as precision-recall, are useful for multiple tasks.
 - Area under Curve (AUC) Area under ROC Curve is a performance metric for measuring the ability of a binary classifier to discriminate between positive and negative classes.
