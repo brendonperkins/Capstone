@@ -124,7 +124,9 @@ The following set of models were developed and trained separately on the two dat
 
 - **K-NEAREST NEIGHBORS:**
 ![ALL - KN](https://github.com/brendonperkins/Capstone/assets/48937916/de759f78-bf23-4af5-a027-ea6bb4758471)
+
 - **DECISION TREE:**
+![ALL - DT](https://github.com/brendonperkins/Capstone/assets/48937916/dc633475-9dd6-4334-8722-853e3bf8bad6)
 
 - **RANDOM FOREST:** 
 
