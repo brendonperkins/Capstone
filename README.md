@@ -150,37 +150,6 @@ the score.
 - **SUPPORT VECTOR MACHINE:** 
 ![ALL - SVM](https://github.com/brendonperkins/Capstone/assets/48937916/4b965319-8697-4e47-a7ca-9b22a69671d4)
 
-### Results for Native-Born Dataset
-- Best Model: 
-  - Logistic Regression (C=1, penalty=L1)
-  - AUC = 0.89
-  - Optimal Threshold: 0.39
-  - Confusion Matrix: [[3998 1265][ 263 1506]]
-    - Accuracy = 0.78 
-    - Precision = 0.54
-    - Recall = 0.85
-    - F1 Score = 0.66
-![native](https://github.com/brendonperkins/Capstone/assets/48937916/4f4c762a-2b3b-4a60-9fc2-9790c80bf2e7)
-![IMPORTANCE - NATIVE](https://github.com/brendonperkins/Capstone/assets/48937916/475ab138-c9d0-4a16-8ba2-a63335cd8f22)
-### Results for Foreign-Born Dataset
-
-- Best Model: 
-  - Random Forest (max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=100)
-  - AUC = 0.89
-  - Optimal Threshold: 0.19
-  - Confusion Matrix: [[417 122][ 15 119]]
-    - Accuracy = 0.80
-    - Precision = 0.49
-    - Recall = 0.89
-    - F1 Score = 0.63
-![foreign](https://github.com/brendonperkins/Capstone/assets/48937916/924c837d-e4fc-40a8-aac4-0cb676b07294)
-![IMPORTANCE - FOREIGN](https://github.com/brendonperkins/Capstone/assets/48937916/9f781495-091c-4a46-aa75-965fecc15595)
-## Deployment Phase
-- Native- and Foreign-Born Models are valid only for:
-  - Ages 18 to 75 years of age.
-  - Hours-per-Week of 15 to 65
-  - Datasets that have been prepared similar to the training set
-
 # Conclusion
 - Both datasets identified Occupation, Education, and Relationship within the top 5 most important parameters for predicting the likelihood of achieving incomes >$50K. For the Foreign-Born dataset, native-country is also an important factor.
 - Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
