@@ -149,7 +149,7 @@ the score.
 - **F-score:** Is a measure of a test’s accuracy that considers both the precision and the recall of the test to compute positives).
 
 **MODELS**
-![ALL - PR-CURVE](https://github.com/brendonperkins/Capstone/assets/48937916/8aa316d9-1116-4fae-8c18-b5e851ae88ab)
+![ALL - PR-CURVE](https://github.com/brendonperkins/Capstone/assets/48937916/be83c4c0-b04b-4108-ac33-92ce19f7e142)
 
 - **BEST MODEL:** It should be notied that all the models perform well as predictors of the target variable given the input variables. However, based on the performance metrics provided for each model, the RandomForest model was identified to be the best choice for this classification task. Here's why:
 
