@@ -200,19 +200,18 @@ The second analysis focused on the full dataset using Accuracy as the scoring cr
     - **Balance between Precision and Recall:** It also demonstrated a strong balance between precision (0.768536) and recall (0.612224) at the default threshold, indicating a good balance between the rate of true positive predictions and the model's ability to capture the positive class.
 
 - **LOGISTIC REGRESSION:** The LogisticRegression model displayed a solid performance with an accuracy of 0.840493, precision of 0.728081, and recall of 0.588598, leading to an F1 score of 0.650951. It found its best parameters to be {'C': 1.0, 'penalty': 'l1'}, achieving this with a relatively quick training duration of 7.07 seconds. The model demonstrated a good balance between precision and recall, making it a competent choice for binary classification tasks, especially considering its efficiency in training time.
-![ALL - LR](https://github.com/brendonperkins/Capstone/assets/48937916/eb03d853-81b1-4aea-91c7-bae54781e5b3)
+![ALL - LR - ROC](https://github.com/brendonperkins/Capstone/assets/48937916/ecf72e35-eb36-4b92-83d3-92d756092f29)
 
 - **K-NEAREST NEIGHBORS:** KNeighbors, with its best parameters set to {'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'uniform'}, achieved an accuracy of 0.824659. The model had a precision of 0.659018 and a recall of 0.634309, resulting in an F1 score of 0.646428. Although it required a longer training time of 53.92 seconds, its performance indicates a moderate balance between identifying the positive class and minimizing false positives, though it lagged slightly behind other models in overall accuracy.
-![ALL - KN](https://github.com/brendonperkins/Capstone/assets/48937916/8196125b-d7d4-49b8-b614-a205adbcc168)
+![ALL - KN - ROC](https://github.com/brendonperkins/Capstone/assets/48937916/95978b67-c418-42bc-9b4d-c3ede51ee38d)
 
 - **DECISION TREE:** The DecisionTree model, optimized with {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 2}, showed strong results with an accuracy of 0.845165, a precision of 0.743855, and a recall of 0.590652, which led to an F1 score of 0.658460. Its training was notably efficient, taking only 6.53 seconds, suggesting that DecisionTree is a fast and fairly accurate model for handling binary classification, though it faces limitations in balancing precision and recall as effectively as some other models.
-![ALL - DT](https://github.com/brendonperkins/Capstone/assets/48937916/58fdb454-f8f6-413d-8d08-7807e12bfc15)
+![ALL - DT - ROC](https://github.com/brendonperkins/Capstone/assets/48937916/1928f788-9a89-46dd-87d9-dc152c6a1785)
 
 - **RANDOM FOREST:** Demonstrating the best overall performance, the RandomForest model, with parameters {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100}, achieved the highest accuracy of 0.855419 among the models tested. It showed a precision of 0.768536 and a recall of 0.612224, leading to the highest F1 score of 0.681532. Despite a longer training duration of 98.75 seconds, its ability to maintain a high accuracy while also achieving the best balance between precision and recall marks it as the top contender.
-![ALL - RF](https://github.com/brendonperkins/Capstone/assets/48937916/5f133504-5b2a-4e33-b73b-3f4a2007dc1a)
+![ALL - RF - ROC](https://github.com/brendonperkins/Capstone/assets/48937916/fafadc56-547a-4b7c-b36c-5078b6abf385)
 
 - **NEURAL NETWORK:** The NeuralNetwork, optimized with {'batch_size': 32, 'dropout_rate': 0.2, 'epochs': 20, 'layers': [64, 64, 32], 'optimizer': 'adam'}, recorded an accuracy of 0.840493. It achieved a precision of 0.764749 and a recall of 0.532614, culminating in an F1 score of 0.627914. While its training duration was the longest at 471.90 seconds, the model showed strong potential in minimizing false positives but at the expense of a lower recall rate, indicating a challenge in identifying all positive cases effectively.
-![ALL - NN](https://github.com/brendonperkins/Capstone/assets/48937916/dff44c27-ac4a-4dfd-99c8-4dba45791063)
+![ALL - NN - ROC](https://github.com/brendonperkins/Capstone/assets/48937916/2c3bcd4d-6242-4465-900c-4703e3bed1a6)
 
 - **SUPPORT VECTOR MACHINE:** SVM found its best performance with parameters {'C': 100, 'gamma': 'auto', 'kernel': 'rbf'}, reaching an accuracy of 0.842310. The model had a high precision of 0.806020 but a lower recall of 0.495121, resulting in an F1 score of 0.613427. Its training took the longest time of 549.31 seconds, suggesting that while SVM is very capable of identifying positive cases with high confidence, it struggles more with recall, making it less efficient at capturing the majority of the positive class.
-![ALL - SVM](https://github.com/brendonperkins/Capstone/assets/48937916/ebbb1532-81c3-4a43-a4c6-f4cf2987158f)
