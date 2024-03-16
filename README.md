@@ -132,6 +132,7 @@ The following set of models were developed and trained separately on the two dat
 ![ALL - RF](https://github.com/brendonperkins/Capstone/assets/48937916/d8aae911-de94-4fa1-b048-72697a0cb354)
 
 - **NEURAL NETWORK:** 
+![ALL - NN](https://github.com/brendonperkins/Capstone/assets/48937916/0415b6cd-5d10-4dda-be4d-861cdc75000e)
 
 - **SUPPORT VECTOR MACHINE:** 
 ![ALL - SVM](https://github.com/brendonperkins/Capstone/assets/48937916/4b965319-8697-4e47-a7ca-9b22a69671d4)
