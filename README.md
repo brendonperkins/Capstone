@@ -12,6 +12,8 @@
 
 ## Dataset Features:
 
+The dataset contains 43,957 entries.
+
 | #   | Type        | Variable       | Values        |
 | --- | ----------- | -------------- | ------------- |
 |  1. | categorical | income         | >50K, <=50K   |
@@ -61,7 +63,7 @@
 ## Data Exploration and Preparation Phases
 
 **Observations:**
-- Native-Born individuals overwhelmingly dominate the dataset (See Plot 08). The features that drive income for Native-Born individuals may be different than for Foreign-Born individuals. Since the instances of Native-Born individuals overwhelmingly outweigh Foreign-Born individuals in the dataset, it is advisable to separate datset consisting of only Foreign-Born individuals for separate modeling and analysis. This prevents the Native-Born records from biasing the drivers of Foreign-Born success, which are likely different.
+- The dataset is predominantly composed of Native-Born individuals, as illustrated in Plot 08. It's important to consider that the factors influencing income levels may differ between Foreign-Born and Native-Born individuals. Given the significant imbalance, bewteen these two classes, a second dataset is prepared for distinct modeling and analysis comprising only of the Foreign-Born individuals. This approach ensures that the analysis of factors influencing the success of Foreign-Born individuals is not skewed by the characteristics of the majority Native-Born class.
 - The number of records having a Target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). The dataset needs 1) to be balanced with the target values so that the models do not become biased to the majority class (See Plot 09), or 2) needs to be fitted using F1 Score instead of Accuracy.
 - Individuals >75 years of age are not adequately represented in the dataset (See Plot 10), so the records for these individuals were dropped.
 - Individuals with >65 hours-per-week are not adequately represented in the dataset (See Plot 11), so the records for these individuals were dropped.
@@ -73,17 +75,17 @@
 - The “education-num” column is duplicative of the “education” column, and is, therefore, dropped from the dataset.
 - All numeric columns were scaled.
 - All categorical columns are encoded using OneHotEncoding with column dropping enabled for columns with binary classes.
-- The Synthetic Minority Over-sampling (SMOTE) method is used to ensure a 1:1 (Minority:Majority) class ratio when Accuracy is used as the scoring criterial for optimizing the models. Otherwise, F1 is used as the scoring criteria with the imbalanced dataset. 
+- After completion of the data cleaning steps, the dataset was reduced to 30,819 entries from its original 43,957 entries. Of those entries remaining, 23,151 entries represent Native-Born indiviudals while 7,668 entries represent Foreign-Born individuals.
 
 ![raw counts copy](https://github.com/brendonperkins/Capstone/assets/48937916/347ae187-2254-4a04-993b-7b91c9ae3d1a)
 
 ## Modeling Phase
 
-A series of classifiers was independently constructed and trained using a dataset partitioned into a 70% training and 30% testing split. The GridSearchCV tool was employed to fine-tune each classifier based on a predefined set of hyper-parameters, ensuring optimal performance. Due to the imbalanced nature of the target variable, the F1 score—a harmonic mean of precision and recall—was chosen as the guiding metric for training. Precision-Recall curves were subsequently plotted for each classifier, with the area under each curve quantified as the Average Precision, reflecting the model's performance across various threshold levels.
+A series of classifiers was independently constructed and trained on multiple datasets with each partitioned into a 70% training and 30% testing split. The datasets used were the original cleaned dataset and a separate dataset prepared from the cleaned dataset to include only Foreign-Born individuals. The GridSearchCV tool was employed to fine-tune each classifier based on a predefined set of hyper-parameters, ensuring optimal performance. Due to the imbalanced nature of the target variable, the F1 score — a harmonic mean of precision and recall — was chosen as the guiding metric for training. Precision-Recall curves were subsequently plotted for each classifier, with the area under each curve quantified as the Average Precision, reflecting the model's performance across various threshold levels.
 
-These Precision-Recall curves were instrumental in determining the most advantageous threshold that maximizes the F1 score, thereby achieving a harmonious balance between Precision (the model's ability to identify only relevant instances) and Recall (the model's ability to identify all relevant instances). Utilizing this optimal threshold, we then computed and compared the confusion matrix and related metrics—namely the F1 Score, Accuracy, Precision, and Recall—at both the default threshold of 0.5 and the optimal threshold. This comparison illustrated the enhancements achieved through the application of the optimal threshold.
+These Precision-Recall curves were instrumental in determining the most advantageous threshold that maximizes the F1 score, thereby achieving a harmonious balance between Precision (the model's ability to identify only relevant instances) and Recall (the model's ability to identify all relevant instances). Utilizing this optimal threshold, I then computed and compared the confusion matrix and related metrics — namely the F1 Score, Accuracy, Precision, and Recall — at both the default threshold of 0.5 and the optimal threshold. This comparison illustrates the enhancements achieved through the application of the optimal threshold.
 
-The classifier that demonstrated the highest Average Precision alongside the most favorable F1 score was subsequently identified as the best-performing model, signifying its superiority in balancing precision and recall while effectively addressing the challenge posed by the class imbalance in the target variable.
+The classifier that demonstrated the highest Average Precision alongside the highest F1 score was subsequently identified as the best-performing model, signifying its superiority in balancing precision and recall and effectively addressing the challenge posed by the class imbalance in the target variable.
 
 - LOGISTIC REGRESSION: A model for binary classification, predicting the probability of a default class instance using a logistic function. 
   - Hyper-Params:
