@@ -1,14 +1,14 @@
 # BUSINESS UNDERSTANDING
 
-## Dataset:
-Adult Census Income from Kaggle
+**Dataset:** Adult Census Income from Kaggle
 
-https://www.kaggle.com/uciml/adult-census-income
+**URL:** https://www.kaggle.com/uciml/adult-census-income
 
-This data was extracted from the 1994 Census bureau database by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics). The task is to predict whether income exceeds $50k per year based on the census data provided above. The Dataset consists of a list of records, each of which captures various features of an individual including income per year.
+**Description:** This data was extracted from the 1994 Census bureau database by Ronny Kohavi and Barry Becker (Data Mining and Visualization, Silicon Graphics). The task is to predict whether income exceeds $50k per year based on the census data provided above. The Dataset consists of a list of records, each of which captures various features of an individual including income per year.
 
-## Nature of Task:
-Supervised Machine Learning > Binary Classification
+**Nature of Task:** Supervised Machine Learning > Binary Classification
+
+**Objective:** Develop a models using multiple classifiers that predict whether an individual's annual income exceeds $50K based on 14 input paramters provided in the dataset. Compare and contrast the models to select the best model and extract feature importances for the best model. 
 
 ## Dataset Features:
 
@@ -31,12 +31,12 @@ Supervised Machine Learning > Binary Classification
 | 15. | categorical | native-country | United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands |
 
 # APPLICATION OF THE CRISP-DM PROCESS
-1. Data Exploration Phase
+1. **Data Exploration Phase**
     - Determine raw counts of Target Class >$50 by Class (for Categorical Columns) or Bracketed Value (for Numeric Columns).
     - Determine Target Ratio (= Raw Count of >$50k / Raw Count <=$50K) by Class (for Categorical Columns) or Bracketed Value (for Numeric Columns).
     - Plot histograms for numeric columns.
     - Plot correlation matrix (heat map for Numeric columns).
-2. Data Preparation Phase
+2. **Data Preparation Phase**
     - Identify and Address Missing Values
     - Identify and Address Outlier Values
     - Identify and Address Skewed Histograms
@@ -46,36 +46,35 @@ Supervised Machine Learning > Binary Classification
     - Implement Scaling for numeric columns
     - Split dataset into Training and Test Sets
     - Identify and Address Class Imbalances in Target Variable for Training set
-3. Modeling Phase
+3. **Modeling Phase**
     - Use GridSearchCV to tune hyper-parameters
     - Generate ROC curves and optimize thresholds
     - Assess confusion matrices and associated metrics
-4. Evaluation Phase
+4. **Evaluation Phase**
     - Implement ROC Curves and select model with best performance
       - Determine optimal threshold
       - Report confusion matrix and associated metrics
       - Report feature importances for model with best performance
-5. Deployment Phase
-6. Suggested Follow-Up
+5. **Deployment Phase**
+6. **Suggested Follow-Up**
 
 ## Data Exploration and Preparation Phases
 
-Observations:
-- Native-Born individuals overwhelmingly dominate the dataset (See Plot 08), so Native-Born and Foreign-Born individuals are split into two separate datasets for separate modeling and analysis. This prevents the Native-Born records from biasing the drivers of Foreign-Born success, which are likely different for each group.
-- The number of records having a Target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). The dataset needs to be balanced with the target values so that the models do not become biased to the majority class (See Plot 09).
+**Observations:**
+- Native-Born individuals overwhelmingly dominate the dataset (See Plot 08). The features that drive income for Native-Born individuals may be different than for Foreign-Born individuals. Since the instances of Native-Born individuals overwhelmingly outweigh Foreign-Born individuals in the dataset, it is advisable to separate datset consisting of only Foreign-Born individuals for separate modeling and analysis. This prevents the Native-Born records from biasing the drivers of Foreign-Born success, which are likely different.
+- The number of records having a Target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). The dataset needs 1) to be balanced with the target values so that the models do not become biased to the majority class (See Plot 09), or 2) needs to be fitted using F1 Score instead of Accuracy.
 - Individuals >75 years of age are not adequately represented in the dataset (See Plot 10), so the records for these individuals were dropped.
 - Individuals with >65 hours-per-week are not adequately represented in the dataset (See Plot 11), so the records for these individuals were dropped.
-- The “capital gain” and “capital loss” columns are sparsely populated with non-zero values, so they will be dropped.
+- The “capital loss” column is folded into the “capital gain” column.
 - There are missing values in three of the dataset columns (workclass: 5.7%, occupation: 5.7%, and native country: 1.7%). Due to the sparseness of the missing values, records with missing values are dropped.
-- Histogram plots of the numeric variables show they all have skewed distributions, so they will be replaced with log-transformed values. See Plots 22 - 24.
-- There are no significant correlations between numeric variables (See Plot 25). Therefore, they can be treated as independent predictors of the Target variable.
-- All classes representing less than a high school diploma in the education column have similar target ratios (See Plot 13), indicating that the differentiation of education below a high school diploma adds no insight into the drivers of income. Therefore, all classes representing education levels of less than a high school diploma were aggregated into a single class.
+- Histogram plots of the numeric variables show they all have skewed distributions, so consider replacing them with their log-transformed values. See Plots 22 - 24.
+- There are no significant correlations between numeric variables (See Plot 25). Therefore, they will be treated as independent predictors of the Target variable.
+- All classes representing less than a high school diploma in the education column have similar target ratios (See Plot 13), indicating that the differentiation of education below a high school diploma adds no insight into the drivers of the Target variable. Therefore, all classes representing education levels of less than a high school diploma are aggregated into a single class.
 - The “education-num” column is duplicative of the “education” column, and is, therefore, dropped from the dataset.
 - All numeric columns were scaled.
-- All categorical columns were encoded using OneHotEncoding with column dropping enabled for columns with binary classes.
-- Datasets were split into two sets: Tarining (70%) and Test (30%).
-- The datasets were split into training and test sets using a 70%/30% split.
-- The Synthetic Minority Over-sampling (SMOTE) method was then used to ensure a Minority/Majority ratio of 0.75 to 1 for the Target Variable classes in the Training set only. 
+- All categorical columns are encoded using OneHotEncoding with column dropping enabled for columns with binary classes.
+- The datasets are split into training and test sets using a 70%/30% split.
+- The Synthetic Minority Over-sampling (SMOTE) method is used to ensure a 1:1 (Minority:Majority) class ratio when Accuracy is used as the scoring criterial for optimizing the models. Otherwise, F1 is used as the scoring criteria with the imbalanced dataset. 
 
 ![raw counts copy](https://github.com/brendonperkins/Capstone/assets/48937916/347ae187-2254-4a04-993b-7b91c9ae3d1a)
 
