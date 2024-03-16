@@ -155,7 +155,7 @@ the score.
 ![ALL - DT](https://github.com/brendonperkins/Capstone/assets/48937916/dc633475-9dd6-4334-8722-853e3bf8bad6)
 
 - **RANDOM FOREST:** Demonstrating the best overall performance, the RandomForest model, with parameters {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100}, achieved the highest accuracy of 0.855419 among the models tested. It showed a precision of 0.768536 and a recall of 0.612224, leading to the highest F1 score of 0.681532. Despite a longer training duration of 98.75 seconds, its ability to maintain a high accuracy while also achieving the best balance between precision and recall marks it as the top contender.
-![ALL - RF](https://github.com/brendonperkins/Capstone/assets/48937916/d8aae911-de94-4fa1-b048-72697a0cb354)
+![ALL - RF copy](https://github.com/brendonperkins/Capstone/assets/48937916/f40e7df7-5e17-4465-be2f-83e3c81dcc6f)
 
 - **NEURAL NETWORK:** The NeuralNetwork, optimized with {'batch_size': 32, 'dropout_rate': 0.2, 'epochs': 20, 'layers': [64, 64, 32], 'optimizer': 'adam'}, recorded an accuracy of 0.840493. It achieved a precision of 0.764749 and a recall of 0.532614, culminating in an F1 score of 0.627914. While its training duration was the longest at 471.90 seconds, the model showed strong potential in minimizing false positives but at the expense of a lower recall rate, indicating a challenge in identifying all positive cases effectively.
 ![ALL - NN](https://github.com/brendonperkins/Capstone/assets/48937916/0415b6cd-5d10-4dda-be4d-861cdc75000e)
