@@ -123,7 +123,7 @@ The following set of models were developed and trained separately on the two dat
 ![ALL - LR](https://github.com/brendonperkins/Capstone/assets/48937916/6146828e-c413-4073-9c7b-c429aa51d667)
 
 - **K-NEAREST NEIGHBORS:**
-
+![ALL - KN](https://github.com/brendonperkins/Capstone/assets/48937916/de759f78-bf23-4af5-a027-ea6bb4758471)
 - **DECISION TREE:**
 
 - **RANDOM FOREST:** 
