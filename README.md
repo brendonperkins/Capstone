@@ -129,6 +129,7 @@ The following set of models were developed and trained separately on the two dat
 ![ALL - DT](https://github.com/brendonperkins/Capstone/assets/48937916/dc633475-9dd6-4334-8722-853e3bf8bad6)
 
 - **RANDOM FOREST:** 
+![ALL - RF](https://github.com/brendonperkins/Capstone/assets/48937916/d8aae911-de94-4fa1-b048-72697a0cb354)
 
 - **SUPPORT VECTOR MACHINE:** 
 
