@@ -148,18 +148,23 @@ the score.
 - **Recall:** Is the number of correct positive results divided by the number of all relevant samples (total actual
 - **F-score:** Is a measure of a test’s accuracy that considers both the precision and the recall of the test to compute positives).
 
-![ROC CURVES](https://github.com/brendonperkins/Capstone/assets/48937916/c51b3373-b893-4bbe-85b7-c45e33125aa3)
-
 **APPROACHES**
-Given the imbalance in the target variable classes, it is important to implement model scoring scenarios that are insenitive to this bias to ensure good predictive qualities in the deployed model. Therefore, several model scoring metrics were investigated to produce the most optimal model:
 
-1. Scoring based on *Accuracy* with no statistical resampling of the dataset to balance the target minority class with the majority class. This approach was implemented to serve as a baseline for comparison as it is well known that using Accuracy as a scoring metric on imbalanced datsets generally does not lead to the most predictive models in deployment. accuracy can be misleading because predicting the majority class for all instances can still yield a high accuracy score.
-2. Scoring based on *Accuracy* with statistical resampling of the dataset to balance the target minority class with the majority class to achieve a balanced ratio of 0.75 : 1. This approach was implemented to see if statistical resampling overcomes the bias.
-3. Scoring based on *Accuracy* with statistical resampling of the dataset to balance the target minority class with the majority class to achieve a balanced ratio of 1 : 1. This additional approach was implemented to see if the degree of statistical resampling matters.
-4. Scoring based on the *Geometric Mean = (TPR * (1-FPR))^0.5* withno statistical resampling of the dataset. The geometric mean gives a more balanced measure that penalizes classifiers that perform well on the majority class but poorly on the minority class and is less sensitive to outliers. This approach is particularly useful for evaluating models on imbalanced datasets, which also leads to improved F1 scores.
-5. Scoring based on *Informedness = TPR - FPR* with no statistical resampling of the dataset. This approach combines both sensitivity and specificity into a single metric, offering a holistic view of the classifier's performance. This is particularly useful in applications where both false positives and false negatives carry significant consequences, such as in medical diagnosis or fraud detection. This approach is particularly useful for evaluating models on imbalanced datasets, which also leads to improved F1 scores.
-6. Scoring based on *F1 = (2 * precision * recall) / (precision + recall * with no statistical resampling of the dataset. This approach combines both sensitivity and specificity into a single metric, offering a holistic view of the classifier's performance. This is particularly useful in applications where both false positives and false negatives carry significant consequences, such as in medical diagnosis or fraud detection. This approach is particularly useful for evaluating models on imbalanced datasets, which also leads to improved F1 scores.
+Given the skewed distribution of class labels in the target variable, it's crucial to adopt scoring strategies that mitigate this imbalance, ensuring the final model maintains robust predictive capabilities. Thus, various scoring metrics were explored to identify the most effective model configuration:
 
+**Baseline Accuracy Scoring without modifying the dataset:** to address class imbalance. This method was employed as a reference point. It's widely acknowledged that relying solely on accuracy for scoring in imbalanced datasets may not yield the most reliable predictive models since a model could achieve high accuracy by merely predicting the majority class.
+
+**Accuracy Scoring with Statistical Resampling:** to adjust the ratio between the minority and majority classes to 0.75:1. This method tested whether statistical resampling could counteract the inherent bias of the dataset.
+
+**Enhanced Accuracy Scoring with Equal Resampling:** aiming for a 1:1 balance between classes through dataset manipulation. This variant further examined the impact of the resampling level on model performance.
+
+**Geometric Mean Scoring (Geometric Mean = sqrt(TPR * (1-FPR))):** without dataset adjustment for class imbalance. The geometric mean offers a balanced performance metric that penalizes models favoring the majority class over the minority, proving less influenced by outliers. This metric is particularly advantageous for models trained on imbalanced datasets and is known to correlate with improvements in the F1 score.
+
+**Informedness Scoring (Informedness = TPR - FPR) without dataset resampling:** This metric integrates sensitivity and specificity into a unified performance measure, providing a comprehensive evaluation of a classifier's effectiveness. Especially relevant in scenarios where both types of classification errors have significant implications, such as medical diagnostics or fraud detection, this method is beneficial for models trained on imbalanced datasets, promoting enhanced F1 scores.
+
+**F1 Score Scoring (F1 = 2 * (precision * recall) / (precision + recall)):** without dataset modifications. This scoring combines precision and recall into a single measure, offering a thorough assessment of the model's performance across both classes. Particularly vital in contexts where both false positives and negatives are costly, the F1 score is invaluable for models trained on imbalanced datasets, encouraging superior overall performance.
+
+![ROC CURVES](https://github.com/brendonperkins/Capstone/assets/48937916/c51b3373-b893-4bbe-85b7-c45e33125aa3)
 
 **RESULTS - ANALYSIS #1**
 
