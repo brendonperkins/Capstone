@@ -148,6 +148,8 @@ the score.
 - **Recall:** Is the number of correct positive results divided by the number of all relevant samples (total actual
 - **F-score:** Is a measure of a test’s accuracy that considers both the precision and the recall of the test to compute positives).
 
+![ROC CURVES](https://github.com/brendonperkins/Capstone/assets/48937916/c51b3373-b893-4bbe-85b7-c45e33125aa3)
+
 **RESULTS - ANALYSIS #1**
 
 The first analysis focused on the full dataset using F1 scoring in conjunction with Precision-Recall Curves to maximize the F1 score for the best performing model. No target variable re-balancing was implemented.
