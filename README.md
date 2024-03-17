@@ -166,6 +166,8 @@ The following plots show the results for each approach desribed above. For each 
 3. The Random Forest F1-Scored model provides the best overall performance with AUC=0.91 and F1=0.70 indicating that it is the best model for distinguishing beteween the target variable's positive and negative classes for the imbalanced dataset. Its Accuracy=0.84 was also the highest among models not specifically trained using Accuracy as the scoring metric and only slightly smaller than the highest Accuracy=0.86.
 4. The metrics for all classifiers were better using F1 scoring than all the alternatives.
 
+![ROC CURVES](https://github.com/brendonperkins/Capstone/assets/48937916/517125a4-b4be-4bee-9025-eeeb0524998d)
+
 **DETAILED RESULTS FOR F1-SCORED MODELS**
 
 The first analysis focused on the full dataset using F1 scoring in conjunction with Precision-Recall Curves to maximize the F1 score for the best performing model. No target variable re-balancing was implemented.
