@@ -4,7 +4,8 @@
 
 **Question:** What are the factors that determine an individual's likelihood of exceeding $50K in annual income?
 
-**Context:** Marketing teams frequently use segmentation strategies to pinpoint potential high-value customers for exclusive offers. In this scenario, achieving a high performance score indicates that the marketing model is effectively identifying individuals who are both interested in and financially capable of purchasing premium products (true positives), while simultaneously conserving resources by avoiding outreach to those less likely to make a purchase (thus minimizing false positives). This targeted efficiency is crucial for optimizing the return on investment (ROI) in marketing campaigns.
+**Context:** 
+Marketing teams often employ strategies to identify and target potential customers who are most likely to buy premium products, aiming for those who not only have the interest but also the financial means. Achieving a high score in identifying these ideal customers (true positives) while avoiding expenditure on reaching those unlikely to buy (minimizing false positives) is key to enhancing the return on investment (ROI) for marketing campaigns. It's important to understand that within the potential customer base, there exists a significant imbalance: a smaller segment can actually afford these high-end products, unlike the larger segment that may desire but cannot purchase them. This disparity presents an additional challenge in efficiently targeting the right individuals to maximize campaign success without misallocating resources. This implies the need for a trained model that maximizes the F1 score.
 
 **Dataset:** Adult Census Income from Kaggle
 
@@ -19,18 +20,18 @@
 # Summarized Results
 - The Random Forest model trained with F1-Scoring provides the best overall performance with AUC=0.91 and F1=0.70 indicating that it is excellent at distinguishing beteween the target variable's positive and negative classes. Its Accuracy=0.84 was also the highest among models not specifically trained using Accuracy as the scoring metric and only slightly smaller than the model with the best Accuracy=0.86.
 - The F1-scored Random Forest model identified Captial-Gains, Marital Status, Relationship, Education, Occupation, and Age as the top 6 most important parameters for predicting the likelihood of achieving incomes >$50K. The least important parameters included race, native-country, gender, and working class as the least significant.
-- Entrepreneurs are more likely to exceed the $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
-- Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
-- Married individuals are far likelier than single individuals to exceed the $50K income threshold (See Plot 14).
-- Whites are far likelier than other races to exceed the $50K income threshold. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset (See Plot 17).
-- Males are far likelier to exceed the $50K income threshold (See Plot 18).
-- Foreign-Born individuals originating from the Caribbean and Central/South America are the least likely to exceed the $50K income threshold (See Plot 19).
-- Foreign-Born from Canada, Europe, and Asia are the most likely to exceed the $50K income threshold (See Plot 19).
-- Likelihood of exceeding $50K income threshold increases with age up to 55 years and decreases thereafter (See Plot 20).
-- Likelihood of exceeding $50K threshold increases with hours per week up to 60 and decreases thereafter before leveling off at 80 (See Plot 21).
+- Tailor marketing messages to entrepreneurs as high value customers as they are the most likely to exceed the $50K threshold (See Plot 12), but do not ignore individuals working in the private sector as they are a large part of the population (See Plot 12).
+- Tailor marketing messages to appeal to individuals with higher levels of education as they correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
+- Tailor marketing messages to appeal to married individuals, who are far likelier than single individuals to exceed the $50K income threshold (See Plot 14).
+Recognize the income disparity across different racial groups, with individuals identifying as white more often surpassing the $50K income threshold. It's important to approach marketing message creation with care and sensitivity to ensure inclusiveness and respect for all demographics. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset (See Plot 17).
+- Tailor marketing messages to appeal to men, who are far likelier to exceed the $50K income threshold (See Plot 18).
+- Avoid marketing messages that specifically target foreign-born individuals, especially those originating from the Caribbean and Central/South America as they are the least likely to exceed the $50K income threshold (See Plot 19).
+- Tailor marketing messages to appeal to foreign-Born individuals from Canada, Europe, and Asia are the most likely to exceed the $50K income threshold (See Plot 19).
+- Tailor marketing messages to appeal to older individuals still working. Likelihood of exceeding $50K income threshold increases with age up to 55 years and decreases thereafter (See Plot 20).
+- Tailor marketing messages to appeal to individuals who work more than 40 hours per week. Likelihood of exceeding $50K threshold increases with hours per week up to 60 and decreases thereafter before leveling off at 80 (See Plot 21).
 
 # Suggested Follow-Up
-Look at the underlying reasons for the lower likelihood of Foreign-Born individuals from Caribbean and Central/South American countries exceeding the $50K income threshold. Determine if underlying causes are 1) the result of socio-economic policies in native countries of origin, or 2) the result of a direct land bridge to the United States, making it a more accessible destination for individuals of all socio-economic classes.
+Marketing messages that inadvertently focus on racial demographics can raise concerns. Insights indicate a disparity in income levels, with a higher proportion of individuals identifying as white surpassing the $50K income threshold. This observation could unintentionally steer marketing efforts towards predominantly white audiences. To foster inclusivity and ensure equitable engagement, it's advisable to undertake further analysis. This would aim to refine the understanding of income distribution across diverse groups, helping to design marketing campaigns that thoughtfully include individuals from various backgrounds, thus avoiding the oversight of excluding minority groups from targeted initiatives.
 
 # Dataset Features
 
@@ -84,7 +85,6 @@ The dataset contains 43,957 entries.
 ## Data Exploration and Preparation Phases
 
 **Observations:**
-- The dataset is predominantly composed of Native-Born individuals, as illustrated in Plot 08. It's important to consider that the factors influencing income levels may differ between Foreign-Born and Native-Born individuals. Given the imbalance bewteen these two classes, a second dataset is prepared for distinct modeling and analysis comprising only of the Foreign-Born individuals. This approach ensures that the analysis of factors influencing the success of Foreign-Born individuals is not skewed by the characteristics of the majority Native-Born class.
 - The number of records having a target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). To address this imbalance, two modeling approaches were explored: 1) the models were scored using F1 as the metric and Precision-Recall curves to select an optimal threshold for generating confusion matrices and 2) the dataset was rebalanced before using Accuracy as the scoring metric and ROC curves to select the optimal threshold for generating confusion matrices.
 - Individuals >75 years of age are not adequately represented in the dataset (See Plot 10), so the records for these individuals were dropped.
 - Individuals with >65 hours-per-week are not adequately represented in the dataset (See Plot 11), so the records for these individuals were dropped.
