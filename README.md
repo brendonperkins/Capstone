@@ -178,8 +178,6 @@ The following plots show the results for each approach desribed above. For each 
 
 **DETAILED RESULTS FOR F1-SCORED MODELS**
 
-The first analysis focused on the full dataset using F1 scoring in conjunction with Precision-Recall Curves to maximize the F1 score for the best performing model. No target variable re-balancing was implemented.
-
 - **BEST MODEL:** It should be notied that all the models perform well as predictors of the target variable given the input variables. However, based on the performance metrics provided for each model, the RandomForest model was identified to be the best choice for this classification task. Here's why:
 
 - **LOGISTIC REGRESSION:** The LogisticRegression model displayed a solid performance with an accuracy of 0.840493, precision of 0.728081, and recall of 0.588598, leading to an F1 score of 0.650951. It found its best parameters to be {'C': 1.0, 'penalty': 'l1'}, achieving this with a relatively quick training duration of 7.07 seconds. The model demonstrated a good balance between precision and recall, making it a competent choice for binary classification tasks, especially considering its efficiency in training time.
