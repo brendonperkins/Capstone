@@ -1,5 +1,7 @@
 # Business Understanding
 
+**Question:** What are the factors that determine an individual's likelihood of exceeding $50K in annual income.
+
 **Dataset:** Adult Census Income from Kaggle
 
 **URL:** https://www.kaggle.com/uciml/adult-census-income
@@ -8,11 +10,11 @@
 
 **Nature of Task:** Supervised Machine Learning > Binary Classification
 
-**Objective:** Develop models using multiple classifiers that predict whether an individual's annual income exceeds $50K based on 14 input paramters provided in the dataset. Compare and contrast the models to select the best model and extract feature importances for the best model. Assume that the predictions are being implemented to target marketing at individuals above the $50K threshold.
+**Objective:** Develop models using multiple classifiers that predict whether an individual's annual income exceeds $50K based on 14 input paramters provided in the dataset. Compare and contrast the models to select the best model and extract feature importances for the best model.
 
 # Summarized Results
-- The Random Forest model identified Marital Status, Captial-Gains, Education, Relationship, Occupation, and Age as the top 6 most important parameters for predicting the likelihood of achieving incomes >$50K. The least important parameters included race,native-country, gender, and working class as the least significant.
-- Entrepreneurs are more likely to exceed $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
+- The F1-scored Random Forest model identified Captial-Gains, Marital Status, Relationship, Education, Occupation, and Age as the top 6 most important parameters for predicting the likelihood of achieving incomes >$50K. The least important parameters included race, native-country, gender, and working class as the least significant.
+- Entrepreneurs are more likely to exceed the $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
 - Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
 - Married individuals are far likelier than single individuals to exceed the $50K income threshold (See Plot 14).
 - Whites are far likelier than other races to exceed the $50K income threshold. Note: Asian-Pacific Islanders class exceeds Whites, but could be an anomalous result due to the sparse representation of this class in the dataset (See Plot 17).
