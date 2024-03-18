@@ -2,7 +2,7 @@
 
 **Scenario:** A business wishes to determine the likelihood of an individual exceeding $50K in annual income for a targeted marketing campaign. 
 
-**Question:** What are the factors that determine an individual's likelihood of exceeding $50K in annual income.
+**Question:** What are the factors that determine an individual's likelihood of exceeding $50K in annual income?
 
 **Context:** Marketing teams frequently use segmentation strategies to pinpoint potential high-value customers for exclusive offers. In this scenario, achieving a high performance score indicates that the marketing model is effectively identifying individuals who are both interested in and financially capable of purchasing premium products (true positives), while simultaneously conserving resources by avoiding outreach to those less likely to make a purchase (thus minimizing false positives). This targeted efficiency is crucial for optimizing the return on investment (ROI) in marketing campaigns.
 
