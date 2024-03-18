@@ -17,6 +17,7 @@
 **Objective:** Develop models using multiple classifiers that predict whether an individual's annual income exceeds $50K based on 14 input paramters provided in the dataset. Compare and contrast the models to select the best model and extract feature importances for the best model.
 
 # Summarized Results
+- The Random Forest model trained with F1-Scoring provides the best overall performance with AUC=0.91 and F1=0.70 indicating that it is excellent at distinguishing beteween the target variable's positive and negative classes. Its Accuracy=0.84 was also the highest among models not specifically trained using Accuracy as the scoring metric and only slightly smaller than the model with the best Accuracy=0.86.
 - The F1-scored Random Forest model identified Captial-Gains, Marital Status, Relationship, Education, Occupation, and Age as the top 6 most important parameters for predicting the likelihood of achieving incomes >$50K. The least important parameters included race, native-country, gender, and working class as the least significant.
 - Entrepreneurs are more likely to exceed the $50K income threshold, followed by individuals working in Federal, State, and Local governments, and individuals working in the private sector (See Plot 12).
 - Higher levels of education correspond with higher probabilities of exceeding the $50K income threshold (See Plot 13).
@@ -83,7 +84,6 @@ The dataset contains 43,957 entries.
 ## Data Exploration and Preparation Phases
 
 **Observations:**
-- The Random Forest, F1-Scored model provides the best overall performance with AUC=0.91 and F1=0.70 indicating that it is the best model for distinguishing beteween the target variable's positive and negative classes for the imbalanced dataset. Its Accuracy=0.84 was also the highest among models not specifically trained using Accuracy as the scoring metric and only slightly smaller than the model with the best Accuracy=0.86.
 - The dataset is predominantly composed of Native-Born individuals, as illustrated in Plot 08. It's important to consider that the factors influencing income levels may differ between Foreign-Born and Native-Born individuals. Given the imbalance bewteen these two classes, a second dataset is prepared for distinct modeling and analysis comprising only of the Foreign-Born individuals. This approach ensures that the analysis of factors influencing the success of Foreign-Born individuals is not skewed by the characteristics of the majority Native-Born class.
 - The number of records having a target income <=$50K (Majority Class) is substantially more than the number having >$50K (Minority Class). To address this imbalance, two modeling approaches were explored: 1) the models were scored using F1 as the metric and Precision-Recall curves to select an optimal threshold for generating confusion matrices and 2) the dataset was rebalanced before using Accuracy as the scoring metric and ROC curves to select the optimal threshold for generating confusion matrices.
 - Individuals >75 years of age are not adequately represented in the dataset (See Plot 10), so the records for these individuals were dropped.
